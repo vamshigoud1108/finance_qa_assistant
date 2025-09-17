@@ -21,8 +21,8 @@ This web application allows users to upload financial documents (PDF or Excel) a
 ## Installation & Running Locally
 1. Clone the repository:
 ```
-git clone <your-repo-link>
-cd folder
+git clone https://github.com/vamshigoud1108/finance_qa_assistant.git
+cd finance_qa_assistant
 ```
 2. Create and activate a virtual environment:
 ```
@@ -51,7 +51,8 @@ streamlit run app.py
 
 4. Click **"Reset Session"** to remove uploaded files and start fresh.
 
-## Demo
+## ▶️ Demo
+![project-demo](project-demo.gif)
 
 ## 📂 File Structure
 ```
@@ -64,11 +65,11 @@ Financial-QA-Assistant/
 ├─ requirements.txt    # Python dependencies
 └─ README.md           # Project description
 ```
-## Success Criteria
+## ✅ Success Criteria
 - Users can upload financial documents successfully.
 - Key metrics are extracted correctly.
 - The app provides accurate answers to questions about uploaded files.
 - Users can interact with the system conversationally.
 
-## Notes
+## ⚠️ Notes
 - Ensure Ollama SLM is installed and running for NLP queries.
