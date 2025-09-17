@@ -1,19 +1,9 @@
 import streamlit as st
 
-from handler import extract_text_from_file
-from pipeline import split_data
-from pipeline import build_vectorstore
-from pipeline import build_qa_chain
-
-st.title("📊 Finance Q&A Assistant")
-
-if st.session_state.qa_chain is None:
-  st.markdown("""
-  Upload your **financial documents** (PDF or Excel).  
-  - Supports: Income Statements, Balance Sheets, Cash Flow Statements  
-  - Extracts key metrics like revenue, expenses, and profit  
-  - Ask questions in plain English and get instant answers  
-  """)
+from file_handler import extract_text_from_file
+from llm_pipeline import split_data
+from llm_pipeline import build_vectorstore
+from llm_pipeline import build_qa_chain
 
 # Initialize session state
 if 'qa_chain' not in st.session_state:
@@ -25,6 +15,15 @@ if "uploaded_files" not in st.session_state:
 if 'uploader_key' not in st.session_state:
    st.session_state.uploader_key = 0
 
+st.title("📊 Finance Q&A Assistant")
+
+if st.session_state.qa_chain is None:
+  st.markdown("""
+  Upload your **financial documents** (PDF or Excel).  
+  - Supports: Income Statements, Balance Sheets, Cash Flow Statements  
+  - Extracts key metrics like revenue, expenses, and profit  
+  - Ask questions in plain English and get instant answers  
+  """)
 
 with st.sidebar:
 
