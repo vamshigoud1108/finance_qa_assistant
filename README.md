@@ -73,3 +73,4 @@ Financial-QA-Assistant/
 
 ## ⚠️ Notes
 - Ensure Ollama SLM is installed and running for NLP queries.
+
